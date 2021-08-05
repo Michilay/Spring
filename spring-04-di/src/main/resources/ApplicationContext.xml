@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="address" class="com.michilay.pojo.Address">
+        <property name="address" value="湖北"></property>
+    </bean>
+    <bean id="student" class="com.michilay.pojo.Student">
+<!--       普通值注入，value-->
+        <property name="name" value="michilay"/>
+<!--        Bean注入，value-->
+        <property name="address" ref="address"/>
+<!--        数组注入-->
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>三国演义</value>
+                <value>水浒传</value>
+            </array>
+        </property>
+<!--        List集合注入-->
+         <property name="hobbys">
+             <list>
+                 <value>听歌</value>
+                 <value>学习</value>
+                 <value>吃饭</value>
+             </list>
+         </property>
+<!--        map-->
+        <property name="card">
+            <map>
+                <entry key="身份证" value="123214123"/>
+                <entry key="银行卡" value="92324322341"/>
+            </map>
+        </property>
+<!--        set-->
+        <property name="games">
+            <set>
+                <value>LOL</value>
+                <value>MC</value>
+                <value>WAR3</value>
+            </set>
+        </property>
+<!--        null-->
+        <property name="wife">
+            <null/>
+        </property>
+<!--        properties-->
+        <property name="info">
+            <props>
+                <prop key="id">200123</prop>
+                <prop key="sex">男</prop>
+                <prop key="username">张三</prop>
+            </props>
+        </property>
+    </bean>
+
+</beans>

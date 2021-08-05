@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    	http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!--&lt;!&ndash;    下表赋值&ndash;&gt;-->
+<!--    <bean id="user" class="com.michilay.pojo.User">-->
+<!--        <constructor-arg index="0" value="michilay"/>-->
+<!--&lt;!&ndash;        <property name="name" value="michilay"/>&ndash;&gt;-->
+<!--    </bean>-->
+
+<!--&lt;!&ndash;    不建议使用&ndash;&gt;-->
+<!--    <bean id="user" class="com.michilay.pojo.User">-->
+<!--        <constructor-arg type="java.lang.String" value="michilay"/>-->
+<!--    </bean>-->
+
+<!--    直接通过参数名来设置-->
+    <bean id="user" class="com.michilay.pojo.User">
+        <constructor-arg name="name" value="michilay1"/>
+    </bean>
+
+    <alias name="user" alias="userAlias"/>
+
+
+<!--    id:bean的唯一标识符，相当于我们学的对象名-->
+    <bean id="userT" class="com.michilay.pojo.UserT"/>
+
+
+</beans>
